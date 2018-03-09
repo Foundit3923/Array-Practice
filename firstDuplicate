@@ -1,0 +1,28 @@
+public class Main{
+
+public static void main(){
+
+int[] array_Of_Numbers = [2,3,3,5,1,2];
+firstDuplicate(array_Of_Numbers);
+}
+
+int firstDuplicate(int[] a) {
+
+    int result = -1;
+    
+    int[] numbers = new int[10000001];
+    for(int j : numbers){
+        j =0;
+    }
+    
+    for(int i : a){
+        numbers[i] = numbers[i] + 1;
+        if(numbers[i] == 2){
+            result = i;
+            break;
+        }
+    }
+   
+    return result;
+}
+}
